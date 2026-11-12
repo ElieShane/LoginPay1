@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>404 – Page not found</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&display=swap">
+<style>
+:root{
+  --bg:#e9eef2; --ink:#1b2733; --muted:#55636f; --accent:#b3261e; --line:#c4cfd8; --btn-bg:#1b2733; --btn-ink:#e9eef2;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){ --bg:#141c24; --ink:#e6edf3; --muted:#9aa8b4; --accent:#ff7a70; --line:#2c3a47; --btn-bg:#e6edf3; --btn-ink:#141c24; }
+}
+:root[data-theme="dark"]{ --bg:#141c24; --ink:#e6edf3; --muted:#9aa8b4; --accent:#ff7a70; --line:#2c3a47; --btn-bg:#e6edf3; --btn-ink:#141c24; }
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{
+  background:var(--bg); color:var(--ink);
+  font-family:"Bricolage Grotesque",system-ui,-apple-system,"Segoe UI",sans-serif;
+  display:flex; align-items:center; justify-content:center; padding:24px;
+}
+main{max-width:560px; width:100%}
+.code{display:flex; align-items:center; gap:.04em; font-weight:800; font-size:clamp(88px,26vw,168px); line-height:1; letter-spacing:-.04em; margin:0 0 8px}
+.code svg{height:.78em; width:auto; color:var(--accent); flex:none}
+h1{font-size:clamp(24px,5vw,32px); margin:0 0 12px; font-weight:700}
+.reason{border-left:4px solid var(--accent); padding:4px 0 4px 16px; margin:20px 0 28px; color:var(--muted); font-size:17px; line-height:1.55; max-width:52ch}
+.reason strong{color:var(--ink)}
+.links{display:flex; flex-wrap:wrap; gap:12px}
+a.btn{display:inline-block; padding:12px 20px; border-radius:6px; font:inherit; font-weight:700; text-decoration:none; background:var(--btn-bg); color:var(--btn-ink)}
+a.ghost{background:transparent; color:var(--ink); border:2px solid var(--line)}
+a:focus-visible{outline:3px solid var(--accent); outline-offset:3px}
+</style>
+</head>
+<body>
+<main>
+  <p class="code" aria-hidden="true">4
+    <svg viewBox="0 0 100 120" fill="none" stroke="currentColor" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"><path d="M28 54V38a22 22 0 0 1 44 0v16"/><rect x="12" y="54" width="76" height="58" rx="10" fill="currentColor"/><circle cx="50" cy="80" r="7" fill="var(--bg)" stroke="none"/><path d="M50 84v13" stroke="var(--bg)" stroke-width="8"/></svg>
+    4</p>
+  <h1>404 – Page not found</h1>
+  <p class="reason"><strong>Reason: you are not the admin.</strong> This page is only available to administrators, so it shows as not found for your account.</p>
+  <div class="links">
+    <a class="btn" href="/">Go to homepage</a>
+    <a class="btn ghost" href="/login">Sign in as admin</a>
+  </div>
+</main>
+</body>
+</html>
